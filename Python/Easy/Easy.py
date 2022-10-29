@@ -7,3 +7,9 @@ class Solution:
         track_list = self.length
         last_word = track_list[-1]
         return len(last_word)
+#Given a non-negative integer x, return the square root of x rounded down to the nearest integer. The returned integer should be non-negative as well.
+
+class Solution2:
+    def mySqrt(self, x: int) -> int:
+        s1 = math.isqrt(x)
+        return s1

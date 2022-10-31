@@ -13,3 +13,19 @@ class Solution2:
     def mySqrt(self, x: int) -> int:
         s1 = math.isqrt(x)
         return s1
+
+#Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.
+#https://blog.devgenius.io/leetcode-83-remove-duplicates-from-sorted-list-get-solution-with-images-ddfa56b191f
+class Solution:
+    def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
+         if head == None or head.next == None:
+            return head
+         list = head
+        
+         while(list.next!=None):
+             if list.val == list.next.val:
+                 list.next = list.next.next
+             else:
+                 list = list.next
+        
+         return head
